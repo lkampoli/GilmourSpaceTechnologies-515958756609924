@@ -1,0 +1,1122 @@
+%Gilmore Space LaTeX template
+%Rory Kelly ~ 21 Nov 2024
+%Needed for ?. Must come before document class
+\RequirePackage{pdfmanagement-testphase}
+\DeclareDocumentMetadata{}
+\documentclass[12pt]{article}
+%
+%Potential on how to landscape
+% Landscape : https://tex.stackexchange.com/questions/444913/how-do-i-rotate-a-header-and-footer-in-latex-landscape-page
+%
+% Old reference stuff that wasn't working last I used
+% \usepackage[
+% backend=biber,
+% style=numeric,
+% sorting=none
+% ]{biblatex}
+% \addbibresource{Work.bib}
+%
+% \usepackage{lipsum} % Used for fake text
+\usepackage[a4paper]{geometry}
+\usepackage{amsmath}
+\usepackage[table]{xcolor} % BEAUTY
+\usepackage{pdfpages}
+\usepackage{array}
+\usepackage{tabu}
+\usepackage[normalem]{ulem}
+\usepackage{longtable} %For longtable
+\usepackage{fontspec} %For fonts
+\usepackage[abspath]{currfile} %Fonts
+\usepackage[english]{babel} %Fonts
+%\usepackage{hyperref}
+%%% Ensures Arial works even if not installed on OS
+\setmainfont{Arial}[]
+% 
+\usepackage{titlesec} %Let's me mess with \section \subsection etc.
+\usepackage{graphicx} %Figures
+\usepackage{transparent} %For transparent watermark
+\usepackage{tikz} %For the dedicated among us
+\usepackage{eso-pic} %For watermark
+\usepackage{fancyhdr} %Header and footer
+\usepackage{lastpage} %Gets the total pagenumbers
+% \usepackage{zref-totpages} %Gets the total pagenumbers
+\usepackage{adjustbox}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% MAKE MY DOCUMENTS BEAUTIFUL %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% (Colour) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \newcolumntype{C}{>{\columncolor{Table_Title}}c}
+% \newcolumntype{L}{>{\columncolor{Table_Title}}l}
+% \newcolumntype{R}{>{\columncolor{Table_Title}}r}
+% \newcolumntype{T}[1]{>{\columncolor{Table_Title}}m{#1}}
+% \newcolumntype{Y}[1]{>{\columncolor{Table_Title}}p{#1}}
+% \newcolumntype{U}[1]{>{\columncolor{Table_Title}}b{#1}}
+% \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%
+\definecolor{AtmoBlue}{HTML}{00aeef}
+\definecolor{DeepSpace}{HTML}{0c004b}
+\definecolor{Rocket}{HTML}{c9cacc}
+\definecolor{Titles}{HTML}{2f5496}
+\definecolor{Table_Light}{HTML}{deeaf6}
+\definecolor{Table_Dark}{HTML}{bdd6ee}
+\definecolor{Table_Title}{HTML}{5b9bd5}
+%
+\titleformat{\section}
+{\color{Titles}\normalfont\Large}
+{\color{Titles}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{Titles}\normalfont\large}
+{\color{Titles}\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\color{Titles}\normalfont}
+{\color{Titles}\thesubsubsection}{1em}{}
+%
+% Define colors for code listing
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+%
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float} 
+\usepackage{glossaries}
+\usepackage{soul,color}
+\usepackage[bookmarksopen,
+            colorlinks=true,
+            linkcolor=blue,
+            filecolor=magenta,      
+            urlcolor=cyan,
+            plainpages=false,
+            urlcolor=blue,
+            unicode]{hyperref}
+%
+% Configure listings package
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+%
+\lstset{style=mystyle}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% IMPORTANT, PUT THE DOCUMENT INFORMATION HERE!!!
+\newcommand{\DocumentID}{000-00001}
+\newcommand{\VersionID}{1.0.0}
+\newcommand{\PublishID}{\today}
+%
+\pagestyle{fancy}
+\lhead{\scriptsize Doc Brief Description}
+\rhead{\scriptsize \DocumentID \\ \VersionID}
+\chead{\includegraphics[width=4cm]{logo.png}}
+\lfoot{}
+\rfoot{\scriptsize Page \thepage\ of \pageref{LastPage}}
+\cfoot{\scriptsize Private and Confidential © 2024 Gilmour Space}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+%
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    margin=1in,
+}
+%
+% \pagenumbering{Roman}
+%
+%\newcounter{chapcntr}
+%\setcounter{chapcntr}{-1}
+%\newcommand*\toccolor{%
+%    \ifcase\value{chapcntr}%
+%         \color{red}%----- 0 --
+%    \or  \color{blue}%---- 1 --
+%    \or  \color{green}%--- 2 --
+%    \or  \color{cyan}%---- 3 --
+%    \else \color{black}%-- default
+%    \fi}
+%
+%Turn of the LaTeX indents
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+%
+%Totally forgot what this was for
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+%
+%Add the title page background
+\AddToShipoutPictureBG*{
+    \put(0,0){
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \vfill
+            \centering
+            \transparent{0.25}\includegraphics[width=15cm]{icon.png}%
+            \vfill
+        }
+    }
+}
+%
+%\input{gloassary}
+%
+\begin{document}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\thispagestyle{empty}
+
+\begin{center}
+    \vspace*{-2.5cm}
+    \includegraphics[width=9.5cm]{logo.png}
+\end{center}
+
+\vspace{2.5cm}
+
+\centerline{\Huge \textbf{Gilmour Space Technologies}}
+\centerline{\Huge \textbf{Mentorship Program}}
+
+\vspace{1cm}
+
+\centerline{\LARGE \textbf{\uline{Muggera Engine CFD}}}
+
+\vspace{1cm}
+
+\centerline{\textbf{Document ID:} \DocumentID}
+\vspace{0.25cm}
+\centerline{\textbf{Version:} \VersionID}
+\vspace{0.25cm}
+\centerline{\textbf{Published:} \PublishID}
+
+\vspace{2.5cm}
+
+\begin{table}[h]
+\bgroup
+    \def\arraystretch{1.5}
+    \begin{tabular}{r >{\centering\arraybackslash}m{3.5cm} >{\centering\arraybackslash}m{3.8cm} >{\centering\arraybackslash}m{4cm}}
+        & \textbf{NAME} & \textbf{TITLE/ROLE} & \textbf{SIGNATURE}\\\hline
+        \multicolumn{1}{ r| }{\textbf{AUTHORED BY:}} & Lorenzo Campoli & Senior Systems Modelling Engineer & \includegraphics[width=\linewidth]{signature.png} \\
+        %\multicolumn{1}{ r| }{}&&&\\
+        \multicolumn{1}{ r| }{\textbf{REVIEWED BY:}} & John Cramer & Principal Propulsion Engineer & \\
+        %\multicolumn{1}{ r| }{}&&&\\
+        \multicolumn{1}{ r| }{\textbf{APPROVED BY:}} & Eleazar Gonzalez-Casas & Chief Engineer & \\
+        \hline
+    \end{tabular}
+\egroup
+\end{table}
+
+%\newpage
+
+\begin{abstract}
+\noindent Within the framework of the Gilmour Space Technologies Mentorship Program, it was established that, as a first step, one possible direction of work could be the numerical simulation of the gas generator of the Muggera engine which will be tested and adopted by the new liquid rocket engine of Eris. This work aims at reporting all phase of this numerical simulations' campaign.
+\end{abstract}
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\pagebreak
+%Watermark for rest of document
+\AddToShipoutPictureBG{
+    \put(0.6\pagewidth,0){
+        \transparent{0.3}\includegraphics[width=7.5cm]{icon.png}%
+    }
+}
+\tableofcontents
+%\pagebreak
+\listoffigures
+\listoftables
+%\pagebreak
+%Table alternating colours for rest of document
+\rowcolors{2}{Table_Dark}{Table_Light}
+
+\section{Introduction}\label{sec:intro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A gas generator is a critical component in certain rocket engine designs, particularly those employing a gas-generator cycle. The gas generator is a small combustion chamber within the rocket engine that burns a portion of the propellants to produce hot, high-pressure gas. This gas is not used directly for thrust but instead powers the turbopumps that feed the main combustion chamber with propellants. The gas generator cycle is known for its simplicity and reliability, making it a popular choice for many modern rocket engines.
+
+In particular, the system under investigation runs on non-hypergolic propellant LOX/Jet A-1 in a fuel-rich cycle.
+\begin{itemize}
+    \item \textbf{LOx (Liquid Oxygen):} LOx is a highly efficient oxidizer with excellent performance characteristics. It is widely available, relatively inexpensive, and can be stored at cryogenic temperatures.
+    \item \textbf{Jet-A1:} Jet-A1 is a kerosene-based fuel commonly used in aviation. It has a high energy density, good thermal stability, and low toxicity compared to other rocket fuels like hydrazine. Jet-A1 is less volatile than liquid hydrogen, making it easier and safer to handle.
+\end{itemize}
+
+The combination of LOx and Jet-A1 provides a balance of performance, cost-effectiveness, and operational simplicity, making it ideal for gas-generator-cycle engines.
+
+Among key components of the LOx/Jet-A1 gas generator we find:
+\begin{itemize}
+    \item \textbf{Propellant Injection System:} A small fraction of LOx and Jet-A1 is diverted from the main propellant flow and injected into the gas generator. The injector ensures proper mixing of the oxidizer (LOx) and fuel (Jet-A1) for efficient combustion.
+    \item \textbf{Combustion Chamber:} The gas generator has a dedicated combustion chamber where LOx and Jet-A1 are burned. Unlike the main combustion chamber, the gas generator operates at lower pressures and temperatures to avoid damaging downstream components like the turbine.
+    \item \textbf{Turbine Drive Gas:} The combustion products from the gas generator are hot gases (primarily $\text{CO}_2$, $\text{H}_2\text{O}$, and some unburned hydrocarbons) that drive the turbine. These gases are typically cooler than those in the main combustion chamber to prevent overheating the turbine blades.
+    \item \textbf{Turbopump Assembly:} The turbine converts the thermal energy of the gas into mechanical energy, which drives the fuel and oxidizer pumps. The pumps pressurize the LOx and Jet-A1 before they are fed into the main combustion chamber.
+    \item \textbf{Exhaust System:} After driving the turbine, the exhaust gases from the gas generator are either vented overboard or directed into the main nozzle to contribute a small amount of additional thrust.
+\end{itemize}
+
+Advantages of the gas generator cycle may include:
+\begin{itemize}
+    \item \textbf{Simplicity:} The gas generator cycle is mechanically simpler than staged combustion or expander cycles, reducing development time and cost.
+    \item \textbf{Reliability:} The lower operating pressures and temperatures in the gas generator reduce thermal and mechanical stresses on components.
+    \item \textbf{Reusability:} Engines using the gas generator cycle, such as SpaceX's Merlin engine, have demonstrated reusability, lowering the cost of space launches.
+    \item \textbf{Scalability:} The design can be scaled up or down depending on mission requirements.
+\end{itemize}
+
+%\newpage
+
+\section{Physical models}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+The combustion of kerosene can be approximated by the following global reaction:
+%
+\begin{equation}
+    \text{C}_{12}\text{H}_{26} + 18.5\text{O}_2 \rightarrow 12\text{CO}_2 + 13\text{H}_2\text{O}
+\end{equation}
+%
+This reaction represents the complete combustion of dodecane ($\text{C}_{12}\text{H}_{26}$), a common surrogate for kerosene. {Kerosene combustion} involves complex chemical reactions, heat release, and interactions between turbulence and chemistry which demands for appropriate modelling. Options available in OpenFOAM are listed below.
+%
+%\begin{itemize} % Customize bullet points
+%    \item \textbf{Thermophysical Properties}: Density, viscosity, specific heat, thermal conductivity, and latent heat of vaporization.
+%    
+%    \item \textbf{Chemical Kinetics}: Reaction mechanisms for kerosene combustion (e.g., simplified mechanisms like single-step global reactions or detailed mechanisms).
+%    
+%    \item \textbf{Combustion Regimes}: Premixed, non-premixed (diffusion), or partially premixed combustion.
+%\end{itemize}
+%
+\begin{table}[H]
+\centering
+\caption{Typical Physical Properties of Jet A-1.}
+\label{tab:jet-fuel-properties}
+\begin{tabular}{cc}
+\toprule
+\textbf{Property} & \textbf{Jet A-1} \\
+\midrule
+Flash point & $38\,^\circ\mathrm{C}\,(100\,^\circ\mathrm{F})$ \\
+Autoignition temperature & $210\,^\circ\mathrm{C}\,(410\,^\circ\mathrm{F})$ \\
+Freezing point & $-47\,^\circ\mathrm{C}\,(-53\,^\circ\mathrm{F})$ \\
+Max adiabatic burn temperature & $2,230\,^\circ\mathrm{C}\,(4,050\,^\circ\mathrm{F})$ \\
+Open air burn temperature & $1,030\,^\circ\mathrm{C}\,(1,890\,^\circ\mathrm{F})$\\
+Density at $15\,^\circ\mathrm{C}\,(59\,^\circ\mathrm{F})$ & $0.804\,\mathrm{kg/L}\,(6.71\,\mathrm{lb/US\,gal})$ \\
+Specific energy & $43.15\,\mathrm{MJ/kg}\,(11.99\,\mathrm{kWh/kg})$  \\
+Energy density & $34.7\,\mathrm{MJ/L}\,(9.6\,\mathrm{kWh/L})$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item \textbf{\hl{Breakup model}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item Taylor Analogy Breakup (\textbf{TAB})~\cite{o1987tab}.
+        \item Enhanced Taylor Analogy Breakup (\textbf{ETAB})~\cite{tanner1997liquid,tanner1998simulation}.
+        \item Secondary Breakup Model (\textbf{SHF})~\cite{schmehl2000cfd} to account for the different breakup regimes, such as bag, multimode, shear.
+        \item \textbf{PilchErdman}~\cite{pilch1987use}. Particle secondary breakup model based on the Pilch-Erdman total droplet breakup model.\\
+        The droplet fragment velocity is described by the equation:
+        \[
+            V_d = V \sqrt{\epsilon}(B_1 T + B_2 T^2)
+        \]
+        where:\\
+        
+        \begin{tabular}{lp{8cm}}
+            $V_d$      & Fragment velocity \\
+            $V$        & Magnitude of the relative velocity \\
+            $\epsilon$ & Density ratio ($\rho_{\text{carrier}} / \rho_{\text{droplet}}$) \\
+            $T$        & Characteristic break-up time \\
+            $B_1$      & Model coefficient \\
+            $B_2$      & Model coefficient \\
+        \end{tabular}\\
+        
+        The authors suggest the following values for $B_1$ and $B_2$:
+        \begin{itemize}
+            \item Compressible flow: $B_1 = 0.75 \times 1.0$, $B_2 = 3 \times 0.116$
+            \item Incompressible flow: $B_1 = 0.75 \times 0.5$, $B_2 = 3 \times 0.0758$
+        \end{itemize}
+        \item \textbf{ReitzDiwakar}~\cite{reitz1987modeling,reitz1986effect,reitz1987structure}. Secondary breakup model.
+    \end{itemize}
+%
+    \item \textbf{\hl{Atomization model}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \begin{itemize}
+            \item \textbf{BlobsSheetAtomization}~\cite{han1997modeling,allocca2002experimental}.%: Primary Breakup Model for pressure swirl atomizers.
+            \item \textbf{LISAAtomization}~\cite{senecal1999modeling,schmidt1999pressure}.%: Primary Breakup Model for pressure swirl atomizers.
+        \end{itemize}
+%
+    \item \textbf{\hl{Evaporation model}}%phaseChangeModel
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item \textbf{LiquidEvaporation}: Liquid evaporation model using ideal gas assumption.
+        \item \textbf{LiquidEvapFuchsKnudsen}~\cite{chen2017numerical}: Liquid evaporation/condensation model for solution of liquid and solid. This model takes into account the Fuchs-Knudsen number correction, the modified Raoult's law is used to obtain the concentration of the evaporable component on the surface, and the activity coefficient is used. The correction Kelvin effect is used.
+        \item \textbf{LiquidEvaporationBoil}: Liquid evaporation model using ideal gas assumption and including boiling model based on~\cite{zuo2000studies}.
+    \end{itemize}
+%
+   \item \textbf{\hl{Soot model}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item \textbf{grpRadiationSootSubModels}: Liquid evaporation model using ideal gas assumption.
+         This soot model is purely a state model. The amount of soot produced is determined by a single-step chemistry as:
+        \[
+            \nu_f \text{Fuel} + \nu_{\text{Ox}} \text{Ox} = \nu_P P + \nu_{\text{Soot}} \text{Soot}
+        \]
+        $\nu_{\text{Soot}}$ is prescribed by the user. The single-step chemistry used is read from the combustion. The soot is not considered in the thermodynamics of the system and is not treated as an extra species in the solver.
+        
+        The spatial distribution is given by the normalization of the first product on the right-hand side (RHS) of the reaction by default, or it can be added as input.
+        
+        The input dictionary reads as follows in the \texttt{radiationProperties} dictionary:
+        \begin{verbatim}
+sootModel mixtureFractionSoot<gasHThermoPhysics>;
+mixtureFractionSootCoeffs
+{
+    nuSoot              0.015;
+    Wsoot               12;
+    mappingField        P;
+}
+        \end{verbatim}
+    \end{itemize}
+%
+   \item \textbf{\hl{Injection model}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \begin{itemize}
+        \item \textbf{grpLagrangianIntermediateInjectionSubModels}.
+        Injection positions are specified by a particle number density within a cell set.
+        The user specifies:
+        \begin{itemize}
+            \item Number density of particles in the cell set (effective)
+            \item Total mass to inject
+            \item Initial parcel velocity
+        \end{itemize}
+        Properties:
+        \begin{itemize}
+            \item Parcel diameters obtained by a PDF model
+            \item All parcels introduced at the start of the simulation (SO)
+        \end{itemize}
+        \item \textbf{ConeInjection}.
+         Multi-point cone injection model.
+        The user specifies:
+        \begin{itemize}
+            \item Time of start of injection
+            \item List of injector positions and directions (along injection axes)
+            \item Number of parcels to inject per injector
+            \item Parcel velocities
+            \item Inner and outer half-cone angles
+        \end{itemize}
+        Properties:
+        \begin{itemize}
+            \item Parcel diameters obtained by a distribution model
+        \end{itemize}
+        \item \textbf{ConeNozzleInjection}.
+        Cone injection model.
+        The user specifies:
+        \begin{itemize}
+            \item Time of start of injection
+            \item Injector position
+            \item Direction (along injection axis)
+            \item Parcel flow rate
+            \item Inner and outer half-cone angles
+        \end{itemize}
+        Properties:
+        \begin{itemize}
+            \item Parcel diameters obtained by a size distribution model.
+            \item Parcel velocity is calculated as:
+                \begin{itemize}
+                    \item Constant velocity:
+                        \begin{verbatim}
+U = <specified by user>
+                        \end{verbatim}
+                    \item Pressure-driven velocity:
+                        \begin{verbatim}
+U = sqrt(2*(Pinj - Pamb)/rho)
+                        \end{verbatim}
+                    \item Flow rate and discharge:
+                        \begin{verbatim}
+U = V_dot/(A*Cd)
+                        \end{verbatim}
+                \end{itemize}
+        \end{itemize}
+        \item \textbf{InflationInjection}. Inflation injection - creates new particles by splitting existing particles within a set of generation cells, then inflating them to a target diameter within the generation cells and an additional set of inflation cells.
+        \item \textbf{InjectedParticleDistributionInjection}. Interrogates an \texttt{injectedParticleCloud} to convert the raw particle data into a set of 'binned' injectors.
+        The bins are set according to the particle \texttt{tag} property, from which:
+        \begin{itemize}
+            \item Diameters are converted into \texttt{general distributions} with a user-specified bin width.
+            \item Raw velocity and diameter data are resampled and stored to provide variations per injector.
+        \end{itemize}
+        The mass to inject can be set according to the raw input data mass total by using the \texttt{applyDistributionMassTotal} switch.
+        \item \textbf{InjectedParticleInjection}. Replays a set of particle data using the assumption of one particle per parcel based on an \texttt{injectedParticleCloud}.\\
+        Example usage in the configuration file:
+        \begin{verbatim}
+model1
+{
+    type            injectedParticleInjection;
+    SOI             0;
+    massTotal       0; // Place holder only
+    parcelBasisType fixed;
+    nParticle       1; // 1 particle per parcel
+    cloud           eulerianParticleCloud;
+    positionOffset  (-0.025 2 -0.025);
+}
+        \end{verbatim}
+        \item \textbf{InjectionModel}.
+        Templated injection model class.
+        The injection model nominally describes the parcel:
+        \begin{itemize}
+            \item Position
+            \item Diameter
+            \item Velocity
+        \end{itemize}
+        In this case, the \texttt{fullyDescribed()} flag should be set to 0 (\texttt{false}). When the parcel is then added to the cloud, the remaining properties are populated using values supplied in the constant properties.
+        
+        If, however, all of a parcel's properties are described in the model, the \texttt{fullDescribed()} flag should be set to 1 (\texttt{true}).
+        \item \textbf{grpLagrangianIntermediateInjectionSubModels}
+        Particle injection sources read from a look-up table. Each row corresponds to an injection site.
+        \begin{verbatim}
+(
+    (x y z) (u v w) d rho mDot   // injector 1
+    (x y z) (u v w) d rho mDot   // injector 2
+    ...
+    (x y z) (u v w) d rho mDot   // injector N
+);
+        \end{verbatim}
+        where:\\
+        
+        \begin{tabular}{lp{8cm}}
+            $x, y, z$ & Global Cartesian coordinates [m] \\
+            $u, v, w$ & Global Cartesian velocity components [m/s] \\
+            $d$       & Diameter [m] \\
+            $\rho$    & Density [kg/m$^3$] \\
+            $\dot{m}$ & Mass flow rate [kg/s] \\
+        \end{tabular}
+        \item \textbf{ManualInjection}.
+        Manual injection model.
+        The user specifies:
+        \begin{itemize}
+            \item Total mass to inject
+            \item Parcel positions in file \texttt{positionsFile}
+            \item Initial parcel velocity
+        \end{itemize}
+        Properties:
+        \begin{itemize}
+            \item Parcel diameters obtained by a distribution model
+            \item All parcels introduced at the start of injection (SOI)
+        \end{itemize}
+        \item \textbf{PatchFlowRateInjection}.
+        Patch injection model, which uses patch flow rate to determine concentration and velocity.
+        The user specifies:
+        \begin{itemize}
+            \item Total mass to inject
+            \item Name of patch
+            \item Injection duration
+            \item Injection target concentration/carrier volume flow rate
+        \end{itemize}
+        Properties:
+        \begin{itemize}
+            \item Initial parcel velocity given by local flow velocity
+            \item Parcel diameters obtained by a distribution model
+            \item Parcels injected randomly across the patch
+        \end{itemize}
+        \item \textbf{PatchInjection}.
+        Patch injection model.
+        The user specifies:
+        \begin{itemize}
+            \item Total mass to inject
+            \item Name of patch
+            \item Injection duration
+            \item Initial parcel velocity
+            \item Injection volume flow rate
+        \end{itemize}
+        Properties:
+        \begin{itemize}
+            \item Parcel diameters obtained by a distribution model
+            \item Parcels injected randomly across the patch
+        \end{itemize}
+    \end{itemize}
+%
+    \item{\hl{\textbf{Combustion model}}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    OpenFOAM supports several combustion models depending on the combustion regime, as reported in Table~\ref{tab:combustion-solvers}:
+    %
+    \begin{itemize}
+    \item \textbf{Premixed combustion}: Use the \texttt{XiFoam} solver with flame-wrinkling models.
+    \item \textbf{Non-premixed combustion}: Use the \texttt{reactingFoam} solver with PDF-based approaches.
+    \item \textbf{Partially premixed combustion}: Use the \texttt{fireFoam} solver for LES simulations.
+    \item  \textbf{Partially stirred reactor turbulent combustion model.}  This model calculates a finite rate, based on both turbulence and chemistry time scales. Depending on mesh resolution, the Cmix parameter can be used
+    to scale the turbulence mixing time scale.
+    \item \textbf{Eddy Dissipation Concept (EDC) turbulent combustion model.}
+    This model considers that the reaction occurs in the regions of the flow
+    where the dissipation of turbulence kinetic energy takes place (fine
+    structures). The mass fraction of the fine structures and the mean residence
+    time are provided by an energy cascade model.
+%
+    There are many versions and developments of the EDC model, 4 of which are
+    currently supported in this implementation: v1981, v1996, v2005 and
+    v2016.  The model variant is selected using the optional version entry in
+    the EDCCoeffs dictionary.
+\end{itemize}
+
+% Table 2.1: Combustion solvers in OpenFOAM
+\begin{table}[H]
+    \centering
+    \caption{Combustion solvers in OpenFOAM.}
+    \label{tab:combustion-solvers}
+    \begin{tabular}{lp{10cm}}
+        \toprule
+        \textbf{Solver} & \textbf{Description} \\
+        \midrule
+        sprayFoam & Constant volume combustion solver for compressible flows involving spray parcels. \\
+        sprayEngineFoam & Moving piston engine solver for compressible flows involving spray parcels. \\
+        coldEngineFoam & Solver for cold flow (without combustion) for internal combustion engines. \\
+        engineFoam & Solver for combustion in internal combustion engines. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+%
+In~\cite{wang2018physics,xu2018physics}, the \href{https://web.stanford.edu/group/haiwanglab/HyChem}{HyChem} (Hybrid Chemistry) approach to modeling the combustion chemistry of real liquid fuels was developed. The approach takes advantage of the key physics underlying the high-temperature combustion of large hydrocarbon fuels.
+
+\begin{enumerate}
+    \item Pyrolysis/oxidative pyrolysis of the fuel occurs first, followed by oxidation of the pyrolysis products.
+    \item The oxidation of the pyrolysis products is rate-limiting in the overall fuel oxidation process.
+    \item The combustion of the multicomponent fuel follows the principle of large fuel components \cite{xu2019principle}.
+\end{enumerate}
+
+The approach combines experimentally constrained, lumped reaction steps for fuel pyrolysis and oxidative pyrolysis with detailed reaction models for the pyrolysis and oxidation of the fuel pyrolysis products. 
+
+For conventional petroleum-derived fuels, the pyrolysis products considered are usually:
+\begin{itemize}
+    \item Ethylene ($\text{C}_2\text{H}_4$),
+    \item Hydrogen ($\text{H}_2$),
+    \item Methane ($\text{CH}_4$),
+    \item Propene ($\text{C}_3\text{H}_6$),
+    \item Iso-butene ($\text{i-C}_4\text{H}_8$),
+    \item 1-Butene ($\text{1-C}_4\text{H}_8$),
+    \item Benzene ($\text{C}_6\text{H}_6$),
+    \item Toluene ($\text{C}_7\text{H}_8$),
+    \item Two radical species ($\text{CH}_3$ and $\text{H}$).
+\end{itemize}
+
+Other species can be added as needed, depending on the fuel composition. For example, the pyrolysis products of some synthetic fuels can vary with respect to the composition and molecular structure of the parent fuel.
+
+
+\url{http://combustion.berkeley.edu/gri-mech}
+%
+    \item \hl{\textbf{Chemical kinetics model}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    Chemical reactions can be modeled using:
+    \begin{itemize}
+    \item \textbf{Global Mechanisms}: Simplified one-step reactions.
+    \item \textbf{Reduced Mechanisms}: Fewer species for computational efficiency.
+    \item \textbf{Detailed Mechanisms}: Include hundreds of species for high accuracy.
+    \end{itemize}
+    Define the reaction mechanism in the \texttt{constant/chemistryProperties} file:
+%
+\begin{lstlisting}[language={}, caption={Chemistry Properties in OpenFOAM.}]
+chemistryReader foamChemistryReader;
+
+foamChemistryFile "$FOAM_CASE/constant/reactions";
+foamChemistryThermoFile "$FOAM_CASE/constant/thermo";
+
+solver ode;
+\end{lstlisting}
+
+High-speed flow simulations encounter many challenges, such as modeling the high-speed flow-turbulence-chemistry interaction. To simulate these effects accurately, highly refined mesh size as well as \textbf{finite rate chemistry (FRC)} are typically needed, which could easily cause prohibitive computation cost. Even though the low-manifold models such as \textbf{flamelet/progress-variable (FPV)} model is used in some supersonic combustion~\cite{cymbalist2016application}, it is pointed out in~\cite{mrema2019large} that most of these low-manifold models need complicated corrections when applied to fully compressible flows and often mispredict key physical quantities. As a result, \textbf{mechanism reduction} has to be employed for FRC simplifications.
+
+The most commonly seen simplification methodology in combustion simulations is a priori chemical mechanism reduction, such as the methods of \textbf{Direct Relation Graph (DRG)}~\cite{lu2005directed}, \textbf{DRG with Error Propagation (DRGEP)}~\cite{pepiot2008efficient}, \textbf{Path Flux Analysis}~\cite{sun2010path}, and \textbf{Global Pathway Selection (GPS)}~\cite{gao2016global}. The conventional way for mechanism reduction is to
+generate the mechanisms under a certain range of operating conditions a priori and subsequently implement these reduced mechanisms into computational fluid dynamics (CFD) combustion simulations. In recent years, the concept of \textbf{dynamic adaptive chemistry (DAC)} scheme which reduces the mechanism on-the-fly at each time step and at each local
+computational cell has been extensively studied in reactive flow simulations~\cite{cymbalist2016application,yang2017parallel}. In this way, the number of species could be reduced to smaller values than the conventional calculations, but the on-the-fly mechanism reduction process
+itself could incur CPU cost. The tabulated chemistry techniques further reduce the effort of mechanism reduction process as well as the chemistry integration process. Examples of combining DAC and tabulated chemistry can be
+found in~\cite{contino2011coupling,yang2017sensitivity,zhou2018computational}.
+
+\textbf{Tabulated dynamic adaptive chemistry (TDAC)}~\cite{contino2011coupling}. is used to accelerate the finite rate chemistry
+integration. TDAC is an algorithm that combines in situ adaptive tabulation (ISAT)~\cite{pope1997computationally} and dynamic adaptive chemistry (DAC)~\cite{liang2009dynamic}. In conventional DAC, the mechanism reduction process is conducted at each time step and each grid point to generate an optimal reduced mechanism considering the local and current thermodynamic conditions and species composition. However, the mechanism reduction process could incur expensive computation, especially with large amount of grid points. In TDAC, this issue is addressed by the ISAT technique, which only requires mechanism reduction when the current and local state is not within the accuracy region of the tabulated chemistry. In ISAT, this accuracy region is quantified and the tabulation is dynamically increased. Another important feature of TDAC is the reduction on species transport equations. When reduced mechanism is produced and unimportant species are eliminated, only the important species transport equations are solved, which further significantly reduce the computational cost.
+
+%
+    \item \hl{\textbf{Thermophysical model}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    OpenFOAM requires thermophysical properties for kerosene (e.g., Jet A/A-1) to be defined in the \texttt{constant/thermophysicalProperties} file. Surrogate fuels like n-decane or n-dodecane are often used to approximate kerosene properties.
+    %
+\begin{lstlisting}[language={bash}, caption={Thermophysical Properties in OpenFOAM.}]
+thermoType
+{
+    type            hePsiThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState perfectGas;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+mixture
+{
+    specie
+    {
+        molWeight       142; // Approximate molecular weight of kerosene
+    }
+    thermodynamics
+    {
+        Cp              2000; // Specific heat capacity [J/kg/K]
+        Hf              -5000000; // Heat of formation [J/kg]
+    }
+    transport
+    {
+        mu              1e-5; // Dynamic viscosity [Pa.s]
+        Pr              0.7; // Prandtl number
+    }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=C++, caption={OpenFOAM Sub-Models Configuration}]
+subModels
+{
+    particleForces
+    {
+        sphereDrag;
+    }
+    injectionModels
+    {
+        model1
+        {
+            type            coneNozzleInjection;
+            SOI             0;
+            parcelBasisType mass;
+            injectionMethod disc;
+            flowType        flowRateAndDischarge;
+            position        (0 0 0);
+            direction       (1 0 0);
+            parcelsPerSecond 700000000; // (Di Ilio et al., (2019), p. 6)
+            #include "<constant>/massFlowRateProfile.foam"
+            thetaInner      constant 0.0;
+            thetaOuter      constant 11.0; // (Di Ilio et al., (2019), p. 4)
+            sizeDistribution
+            {
+                type        RosinRammler;
+                RosinRammlerDistribution
+                {
+                    minValue        1e-06;
+                    maxValue        18e-06;
+                    d               6e-06;
+                    n               3;
+                }
+            }
+        }
+    }
+    dispersionModel stochasticDispersionRAS;
+    patchInteractionModel none;
+    heatTransferModel RanzMarshall;
+    compositionModel singlePhaseMixture;
+    phaseChangeModel liquidEvaporationBoil;
+    surfaceFilmModel none;
+    atomizationModel none;
+    breakupModel ReitzKHRT;
+    stochasticCollisionModel none;
+    radiation       off;
+    RanzMarshallCoeffs
+    {
+        BirdCorrection  true;
+    }
+    singlePhaseMixtureCoeffs
+    {
+        phases
+        (
+            liquid
+            {
+                C12H26    1;
+            }
+        );
+    }
+    liquidEvaporationBoilCoeffs
+    {
+        enthalpyTransfer enthalpyDifference;
+        activeLiquids    ( C12H26 );
+    }
+    ETABCoeffs
+    {
+        // (Wehrfritz et al. (2013), Table 2)
+        Cmu             10.0;
+        Comega          8.0;
+        WeCrit          12;
+        k1              0.2;
+        k2              0.2;
+        WeTransition    100.0;
+    }
+    ReitzKHRTCoeffs
+    {
+        defaultCoeffs   no;
+        B0              0.61;
+        B1              18;
+        Ctau            1.0;
+        CRT             0.1;
+        msLimit         0.3;
+        WeberLimit      6.0;
+        // (Wehrfritz et al. (2013), Table 1)
+     /* defaultCoeffs   no;
+        B0              0.61;
+        B1              40;
+        Ctau            1.0;
+        CRT             0.1;
+        msLimit         0.03;
+        WeberLimit      6.0; */
+    }
+}
+\end{lstlisting}
+\item \textbf{\hl{particleForces}}
+\item \textbf{\hl{dispersionModel}}
+\item \textbf{\hl{patchInteractionModel}}
+\item \textbf{\hl{heatTransferModel}}: RanzMarshall
+\item \textbf{\hl{compositionModel}} singlePhaseMixture
+%\item phaseChangeModel liquidEvaporationBoil 
+\item \textbf{\hl{surfaceFilmModel}}
+%\item atomizationModel 
+%\item breakupModel ReitzKHRT 
+\item \textbf{\hl{stochasticCollisionModel}}
+\item \textbf{\hl{radiation}}
+\end{itemize}
+
+% https://www.openfoam.com/documentation/guides/v1912/api/classFoam_1_1SinglePhaseMixture.html#details
+%\subsection*{Lagrangian Solvers}
+%\begin{itemize}
+%    \item coalChemistryFoam.C
+%    \item DPMFoam.C
+%    \item MPPICFoam.C
+%    \item icoUncoupledKinematicParcelDyMFoam.C
+%    \item icoUncoupledKinematicParcelFoam.C
+%    \item reactingHeterogenousParcelFoam.C
+%    \item reactingParcelFoam.C
+%    \item simpleCoalParcelFoam.C
+%    \item simpleSprayFoam.C
+%    \item sprayDyMFoam.C
+%    \item sprayFoam.C
+%    \item uncoupledKinematicParcelFoam.C
+%\end{itemize}
+%
+%\subsection*{Lagrangian Particle Models}
+%\begin{itemize}
+%    \item Clouds
+%    \item Parcels
+%    \item Submodels
+%    \begin{itemize}
+%        \item Function objects
+%        \begin{itemize}
+%            \item CloudFunctionObject
+%            \item FacePostProcessing
+%            \item ParticleCollector
+%            \item ParticleErosion
+%            \item ParticleTracks
+%            \item ParticleTrap
+%            \item PatchPostProcessing
+%            \begin{itemize}
+%                \item VoidFraction
+%            \end{itemize}
+%        \end{itemize}
+%    \end{itemize}
+%
+%    \item Kinematic
+%    \begin{itemize}
+%        \item Collision
+%        \item Dispersion
+%        \item Forces
+%        \item Injection
+%        \item Patch interaction
+%        \begin{itemize}
+%            \item Surface film
+%        \end{itemize}
+%        \item MP-PIC
+%    \end{itemize}
+%
+%    \item Reacting
+%    \begin{itemize}
+%        \item Atomization
+%        \begin{itemize}
+%            \item AtomizationModel
+%            \begin{itemize}
+%                \item BlobsSheetAtomization
+%                \item LISAAtomization
+%                \item NoAtomization
+%            \end{itemize}
+%        \end{itemize}
+%
+%        \item Breakup
+%        \begin{itemize}
+%            \item BreakupModel
+%            \begin{itemize}
+%                \item ETAB
+%                \item NoBreakup
+%                \item PilchErdman
+%                \item ReitzDiwakar
+%                \item ReitzKHRT
+%                \item SHF
+%                \item TAB
+%            \end{itemize}
+%        \end{itemize}
+%
+%        \item Composition
+%        \begin{itemize}
+%            \item CompositionModel
+%            \begin{itemize}
+%                \item NoComposition
+%                \item SingleMixtureFraction
+%                %\begin{itemize}
+%                %    \item SinglePhaseMixture
+%                %\end{itemize}
+%            \end{itemize}
+%        \end{itemize}
+%
+%        \item Phase change
+%        \begin{itemize}
+%            \item LiquidEvaporation
+%            \item LiquidEvaporationBoil
+%            \item NoPhaseChange
+%            \begin{itemize}
+%                \item PhaseChangeModel
+%            \end{itemize}
+%        \end{itemize}
+%
+%        \item Reacting multiphase
+%        \begin{itemize}
+%            \item Devolatilisation
+%            \item Surface reaction
+%        \end{itemize}
+%
+%        \item Thermodynamic
+%
+%        \item Heat transfer
+%        \begin{itemize}
+%            \item HeatTransferModel
+%            \begin{itemize}
+%                \item NoHeatTransfer
+%                \item RanzMarshall
+%            \end{itemize}
+%        \end{itemize}
+%    \end{itemize}
+%\end{itemize}
+%
+%\subsection*{Combustion Models}
+%\begin{itemize}
+%    %\item combustionModel
+%    \item diffusion
+%    \item diffusionMulticomponent
+%    \item eddyDissipationDiffusionModel
+%    \item Flame Surface Dennsity (FDS)
+%    \item infinitelyFastChemistry
+%    \item laminar
+%    \item noCombustion
+%    \item PaSR
+%    \item singleStepCombustion
+%\end{itemize}
+%
+%\subsection*{Turbulence Models}
+%\begin{itemize}
+%    \item Turbulence Models
+%    \begin{itemize}
+%        \item Boundary conditions
+%        \item Compressible turbulence
+%        \item DES turbulence
+%        \item Incompressible turbulence
+%        \item LES turbulence
+%        \item RAS turbulence
+%        \item Laminar transport model
+%    \end{itemize}
+%
+%    \item Turbulence Modeling Approaches
+%    \begin{itemize}
+%        \item Eddy viscosity
+%        \item Linear viscous stress
+%        \item Nonlinear eddy viscosity
+%        \item Reynolds stress
+%        \item General turbulence model
+%    \end{itemize}
+%\end{itemize}
+
+\section{Numerical approach}\label{sec"sim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%OpenFOAM provides tools to simulate these processes using various solvers and combustion models. 
+This document outlines the steps to characterize kerosene combustion in \textbf{OpenFOAM} and \textbf{Fluent}, including thermophysical property definitions, solver selection, and workflow.
+
+\subsection{OpenFOAM}\label{secsubsec:OF}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection*{Solver selection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Below is a summary of various OpenFOAM solvers and their descriptions:
+
+\begin{table}[H]
+\centering
+\caption{OpenFOAM Solvers for Combustion and Related Problems}
+\label{tab:openfoam-solvers}
+\begin{tabular}{lp{10cm}}
+\toprule
+\textbf{Solver Name} & \textbf{Description} \\
+\midrule
+\texttt{chemFoam} & Solver for chemistry problems, designed for use on single-cell cases to provide comparison against other chemistry solvers. Uses a single-cell mesh and fields created from initial conditions. \\
+\texttt{coldEngineFoam} & Solver for cold-flow in internal combustion engines. \\
+\texttt{fireFoam} & Transient solver for fires and turbulent diffusion flames with reacting particle clouds, surface film, and pyrolysis modeling. \\
+\texttt{PDRFoam} & Solver for compressible premixed/partially-premixed combustion with turbulence modeling. \\
+\texttt{reactingFoam} & Solver for combustion with chemical reactions. \\
+\texttt{rhoReactingBuoyantFoam} & Solver for combustion with chemical reactions using a density-based thermodynamics package with enhanced buoyancy treatment. \\
+\texttt{rhoReactingFoam} & Solver for combustion with chemical reactions using a density-based thermodynamics package. \\
+\texttt{XiFoam} & Solver for compressible premixed/partially-premixed combustion with turbulence modeling. \\
+\texttt{XiDyMFoam} & Solver for compressible premixed/partially-premixed combustion with turbulence modeling. \\
+\texttt{XiEngineFoam} & Solver for internal combustion engines. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Comparison of OpenFOAM Solvers for Compressible Flow Simulations}
+\label{tab:openfoam_solvers}
+\adjustbox{max width=\textwidth}{%
+\begin{tabular}{lccccc}
+\hline
+\textbf{Solver} & \textbf{Type} & \textbf{Turbulence} & \textbf{Compressible} & \textbf{Combustion/Reactivity} & \textbf{Algorithm} \\
+\hline
+rhoSimpleFoam & Steady-state & Yes & Yes & No & SIMPLE \\
+rhoPimpleFoam & Transient & Yes & Yes & No & PIMPLE (PISO-SIMPLE) \\
+rhoCentralFoam & Transient & Optional & Yes & No & Central-differencing (shock-resolving) \\
+rhoReactingFoam & Transient & Yes & Yes & Yes & PISO/SIMPLE \\
+\hline
+\end{tabular}}
+\end{table}
+
+\subsubsection*{Mesh generation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The mesh generation process in OpenFOAM relies on tools like \texttt{blockMesh}, \texttt{snappyHexMesh} or  \texttt{cfMesh}.
+
+\subsubsection*{Initial conditions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection*{Boundary conditions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textbf{fixedFluxPressure} is a pressure boundary condition to set the pressure gradient to the provided value such that the flux on the boundary is that specified by the velocity boundary condition. This condition ensures the correct flux at fixed-flux boundaries by compensating for the body forces (gravity in particular) with the pressure gradient.
+
+The \textbf{waveTransmissive} is a general boundary condition that provides a wave transmissive outflow condition, based on solving DDt(W, field) = 0 at the boundary, W is the wave velocity and field is the field to which this boundary condition is applied.
+
+The \textbf{totalPressure} is a boundary condition that sets the static pressure at the patch based on a specification of the total pressure, . The mode of operation is determined via the input entries and the dimensions of the convective flux, phi ().
+
+Define boundary conditions in the \texttt{0/U} file:
+
+\begin{lstlisting}[language={}, caption={Boundary Conditions in OpenFOAM}]
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform (10 0 0); // Velocity vector
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    walls
+    {
+        type            noSlip;
+    }
+}
+\end{lstlisting}
+
+\subsubsection*{Post-Processing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Use OpenFOAM utilities and ParaView for post-processing:
+
+\begin{itemize}
+    \item Visualize temperature, species concentrations, and velocity fields.
+    \item Analyze flame structure, ignition delay, and pollutant formation (e.g., NOx, CO).
+\end{itemize}
+
+\subsection{Fluent}\label{subsec:Fluent}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% https://www.afs.enea.it/project/neptunius/docs/fluent/html/ug/node520.htm
+% https://www.afs.enea.it/project/neptunius/docs/fluent/html/ug/node1036.htm#Species_Model
+
+\subsubsection{Stability and Convergence in Reacting Flows}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Obtaining a converged solution in a reacting flow can be difficult for a number of reasons. First, the impact of the chemical reaction on the basic flow pattern may be strong, leading to a model in which there is strong coupling between the mass/momentum balances and the species transport equations. This is especially true in combustion, where the reactions lead to a large heat release and subsequent density changes and large accelerations in the flow. All reacting systems have some degree of coupling, however, when the flow properties depend on the species concentrations. These coupling issues are best addressed by the use of a two-step solution process and by the use of under-relaxation.
+
+A second convergence issue in reacting flows involves the magnitude of the reaction source term. When the ANSYS FLUENT model involves very rapid reaction rates (reaction time scales are much faster than convection and diffusion time scales), the solution of the species transport equations becomes numerically difficult. Such systems are termed "stiff'' systems. Stiff systems with laminar chemistry can be solved using either the pressure-based solver with the Stiff Chemistry Solver option enabled, or the density-based solver. The laminar chemistry model may also be used for turbulent flames, where turbulence-chemistry interactions are neglected. However, for such flames, the Eddy-Dissipation Concept or PDF Transport models, which account for turbulence-chemistry interactions, may be a better choice. 
+
+\subsubsection{Ignition in Combustion Simulations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% https://www.afs.enea.it/project/neptunius/docs/fluent/html/ug/node801.htm#sec-patch
+If you introduce fuel to an oxidant, spontaneous ignition does not occur unless the temperature of the mixture exceeds the activation energy threshold required to maintain combustion. This physical issue manifests itself in an ANSYS FLUENT simulation as well. If you are using the laminar finite-rate, finite-rate/eddy-dissipation, Eddy-Dissipation Concept or PDF Transport model for turbulence-chemistry interaction, you have to supply an ignition source to initiate combustion. This ignition source may be a heated surface or inlet mass flow that heats the gas mixture above the required ignition temperature. Often, however, it is the equivalent of a spark: an initial solution state that causes combustion to proceed. You can supply this initial spark by patching a hot temperature into a region of the ANSYS FLUENT model that contains a sufficient fuel/air mixture for ignition to occur. 
+
+\section{Testcases}\label{sec:testcase}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The Muggera gas generator will be numerically simulated by comparing solutions from OpenFOAM and Fluent solvers.
+
+\input{muggera}
+%\input{unielement}
+%\input{sandia}
+%\input{aachen}
+%\input{mb18}
+%\input{dlr1}
+%\input{dlr2}
+
+\section{Resources}
+%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item \url{https://web.stanford.edu/group/haiwanglab/HyChem/pages/download.html}
+    \item \url{https://dustsafetyscience.com/chemkin-openfoam-converter}
+    \item \url{https://www.cerfacs.fr/cantera/mechanisms/meth.php#1S}
+    \item \url{https://ctrfl.princeton.edu/databases}
+    \item \url{https://rmg.mit.edu}
+    \item \url{https://cantera.org/index.html}
+    \item \url{https://github.com/AndyShor/RD_107}
+    \item \url{https://janaf.nist.gov}
+    \item \url{https://www.youtube.com/watch?v=vhQHClufqWY} %  CFD Simulation of a Combustion Chamber: Combustion Model with NOx and Soot in Ansys Fluent 
+    \item \url{https://www.youtube.com/watch?v=dUme0MUoqbk} %  Complete OpenFOAM tutorial - from geometry creation to postprocessing 
+    \item \href{https://www.youtube.com/watch?v=wmWQBOAOtLc}{ANSYS Fluent: Non-premixed Combustion using the Steady Flamelet Model}
+    \item \href{https://www.youtube.com/watch?v=PTdZyy6kxI0}{ANSYS Fluent: Diffusion Controlled Reacting Flow in a Can Combustor}
+    \item \href{https://ansyshelp.ansys.com/public/account/secured?returnurl=/Views/Secured/prod_page.html?pn=Fluent}{Fluent tutorials}
+\end{itemize}
+
+\section{Conclusion}
+%%%%%%%%%%%%%%%%%%%%
+
+A number of critical points for this numerical simulation's campaign have been highlighted, such as:
+%
+\begin{itemize}
+    \item Increase of the computational cost with detailed chemistry.
+    \item Choice of the appropriate turbulence-chemistry interaction models (e.g., EDC, PDF).
+    \item Validation of the results against experimental data or benchmark cases.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{\fill}
+\begin{center}
+    \hspace*{-9.0cm} \LARGE \textbf{Lorenzo Campoli} \\
+    \hspace*{-9.0cm}\includegraphics[width=0.45\textwidth]{signature.png}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace*{-1.0cm}
+
+\textbf{Senior Systems Modelling Engineer}
+
+\textbf{Gilmour Space Technologies}
+
+\textbf{lorenzo.campoli@gspace.com}%\\
+
+%\newpage
+
+%\nocite{*}
+\bibliography{refs}
+\bibliographystyle{plain}
+
+\end{document}

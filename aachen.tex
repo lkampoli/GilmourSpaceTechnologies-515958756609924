@@ -1,0 +1,38 @@
+
+\subsection{The Aachen Bomb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The \href{https://develop.openfoam.com/Development/openfoam/-/tree/OpenFOAM-v2106/tutorials/lagrangian/sprayFoam/aachenBomb}{AachenBomb} testcase is the simulation of combustion inside a constant volume chamber that mimics the begining of power stroke in a 4 stroke engine. The experimental setup of the combustion chamber is in RWTH Aachen university, and the operating conditions are in accordance with the Engine Combustion Network\footnote{https://crf.sandia.gov/research/engine-combustion.}
+
+As mentioned before the geometry of AachenBomb case is similar to the constant volume combustion chamber in RWTH Aachen. The geometry is a cuboid with height(+ve y-axis) 0.1 m and base 0.02x0.02 m (figure 2.1). The injector is placed 5 mm below the top of the chamber (at a height 0.995 m from the bottom plane) in order to avoid boundary effects on the injected fluid. The fluid
+that is injected is n-Heptane (C7H16).
+
+% Table 2.3: Input files for the aachenBomb case
+\begin{table}[H]
+    \centering
+    \caption{Input files for the aachenBomb case}
+    \label{tab:aachenbomb-input-files}
+    \begin{tabular}{lp{10cm}}
+        \toprule
+        \textbf{Input file} & \textbf{Functionality} \\
+        \midrule
+        sprayCloudProperties & Contains inputs for the Lagrangian spray model. \\
+        thermophysicalProperties & Contains inputs for the thermophysical models. \\
+        radiationProperties & Contains inputs for radiation, absorption-emission, and soot models. \\
+        ChemistryProperties & Specifies the chemistry solver and option to switch on/off the chemical reactions. \\
+        combustionProperties & Contains inputs for the combustion model and option to switch on/off combustion. \\
+        turbulenceProperties & Contains inputs for the turbulence model and option to switch on/off turbulence. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{enumerate}
+    \item Prepare the case directory by copying a tutorial \\ (e.g., \texttt{tutorials/combustion/reactingFoam/ras/counterFlowFlame2D}).
+    \item Modify configuration files (\texttt{controlDict}, \texttt{fvSchemes}, \texttt{fvSolution}).
+    \item Run the simulation:
+\begin{lstlisting}[language=bash, caption={Running the Simulation.}]
+blockMesh
+reactingFoam
+\end{lstlisting}
+    \item Post-process results using ParaView.
+\end{enumerate}

@@ -1,0 +1,1122 @@
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.11.20)  17 DEC 2024 11:15
+ restricted system commands enabled.
+**Gilmour_Space_Document_Template.tex
+(./Gilmour_Space_Document_Template.tex
+LaTeX2e <2021-11-15> patch level 1
+Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
+Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2021-05-20 2.74 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "/home/lorenzo/.texlive2021/texmf-va
+r/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2021-05-20.lua" from kpse-res
+olved path "/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader-2021-
+05-20.lua".
+Lua-only attribute luaotfload@noligature = 1
+Lua-only attribute luaotfload@syllabe = 2
+luaotfload | init : Context OpenType loader version 3.116
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 3
+luaotfload | conf : Root cache directory is "/home/lorenzo/.texlive2021/texmf-va
+r/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 4
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2022-01-21>
+Inserting `tracingstacklevels' at position 1 in `input_level_string'.
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-
+testphase.sty
+Package: pdfmanagement-testphase 2022-01-28 v0.95k LaTeX PDF management testpha
+se bundle
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-
+testphase.ltx
+File: pdfmanagement-testphase.ltx 2022-01-28 v0.95k PDF management code (testph
+ase)
+\g__pdfmanagement_EmbeddedFiles_int=\count183
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3bitset/l3bitset.sty
+Package: l3bitset 2021-11-12 L3 Experimental bitset support
+\l__bitset_internal_int=\count184
+))) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2022-01-12 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count185
+\l__pdf_internal_box=\box50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-test
+phase-luatex.def
+File: l3backend-testphase-luatex.def 2022-01-28 LaTeX PDF management testphase 
+bundle backend support:PDFoutput(LuaTeX)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/l3ref-tmp.sty
+Package: l3ref-tmp 2021-06-23 L3 Experimental cross-referencing
+)
+\l__pdf_backend_tmpa_box=\box51
+\l__pdf_backend_tmpb_box=\box52
+\g__pdf_backend_resourceid_int=\count186
+\g__pdf_backend_name_int=\count187
+\g__pdf_backend_page_int=\count188
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-
+firstaid.sty
+Package: pdfmanagement-firstaid 2022-01-28 v0.95k LaTeX PDF management testphas
+e bundle / firstaid-patches
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/output-patches
+-tmp-ltx.sty
+Package: output-patches-tmp-ltx 2021-08-20 v0.95 Temporary patches of output co
+mmands
+ (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count189
+)
+Patching header in \@outputpage
+Patching footer in \@outputpage
+Patching \@makecol for tagging
+Patching \@makecol for tagging
+)
+
+Package pdfmanagement Info: loading pdfmanagement firstaid code for pgf
+
+) (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /home/lorenzo/.texlive2021/tex
+mf-var/luatex-cache/generic/names/luaotfload-names.luc)
+\c@part=\count190
+\c@section=\count191
+\c@subsection=\count192
+\c@subsubsection=\count193
+\c@paragraph=\count194
+\c@subparagraph=\count195
+\c@figure=\count196
+\c@table=\count197
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen137
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count198
+\Gm@cntv=\count199
+\c@Gm@tempcnt=\count266
+\Gm@bindingoffset=\dimen138
+\Gm@wd@mp=\dimen139
+\Gm@odd@mp=\dimen140
+\Gm@even@mp=\dimen141
+\Gm@layoutwidth=\dimen142
+\Gm@layoutheight=\dimen143
+\Gm@layouthoffset=\dimen144
+\Gm@layoutvoffset=\dimen145
+\Gm@dimlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen146
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen147
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count267
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count268
+\leftroot@=\count269
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count270
+\DOTSCASE@=\count271
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen148
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count272
+\c@MaxMatrixCols=\count273
+\dotsspace@=\muskip16
+\c@parentequation=\count274
+\dspbrk@lvl=\count275
+\tag@help=\toks19
+\row@=\count276
+\column@=\count277
+\maxfields@=\count278
+\andhelp@=\toks20
+\eqnshift@=\dimen149
+\alignsep@=\dimen150
+\tagshift@=\dimen151
+\tagwidth@=\dimen152
+\totwidth@=\dimen153
+\lineht@=\dimen154
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 227.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen155
+\ar@mcellbox=\box55
+\extrarowheight=\dimen156
+\NC@list=\toks23
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box56
+)
+\everycr=\toks24
+\minrowclearance=\skip54
+)
+\rownum=\count279
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/xcolor-patches
+-tmp-ltx.sty
+Package: xcolor-patches-tmp-ltx 2022-01-28 v0.95k patch xcolor for l3color
+) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/01/29 v0.5u Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count280
+\calc@Bcount=\count281
+\calc@Adimen=\dimen157
+\calc@Bdimen=\dimen158
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count282
+\calc@Cskip=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen159
+\ESO@tempdimb=\dimen160
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 107.
+)
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
+)
+\AM@pagewidth=\dimen163
+\AM@pageheight=\dimen164
+\AM@fboxrule=\dimen165
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/ppluatex.def
+File: ppluatex.def 2022/01/29 v0.5u Pdfpages driver for LuaTeX (AM)
+)
+\pdfpages@includegraphics@status=\count283
+\AM@pagebox=\box57
+\AM@global@opts=\toks25
+\AM@pagecnt=\count284
+\AM@toc@title=\toks26
+\c@AM@survey=\count285
+\AM@templatesizebox=\box58
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed) + inter
+mediate FMi
+
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box59
+\sift@deathcycles=\count286
+\@vwid@loff=\dimen166
+\@vwid@roff=\dimen167
+)
+\c@taburow=\count287
+\tabu@nbcols=\count288
+\tabu@cnt=\count289
+\tabu@Xcol=\count290
+\tabu@alloc=\count291
+\tabu@nested=\count292
+\tabu@target=\dimen168
+\tabu@spreadtarget=\dimen169
+\tabu@naturalX=\dimen170
+\tabucolX=\dimen171
+\tabu@Xsum=\dimen172
+\extrarowdepth=\dimen173
+\abovetabulinesep=\dimen174
+\belowtabulinesep=\dimen175
+\tabustrutrule=\dimen176
+\tabu@thebody=\toks27
+\tabu@footnotes=\toks28
+\tabu@box=\box60
+\tabu@arstrutbox=\box61
+\tabu@hleads=\box62
+\tabu@vleads=\box63
+\tabu@cellskip=\skip58
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box64
+\UL@hyphenbox=\box65
+\UL@skip=\skip59
+\UL@hook=\toks29
+\UL@height=\dimen177
+\UL@pe=\count293
+\UL@pixel=\dimen178
+\ULC@box=\box66
+Package: ulem 2019/11/18
+\ULdepth=\dimen179
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip60
+\LTright=\skip61
+\LTpre=\skip62
+\LTpost=\skip63
+\LTchunksize=\count294
+\LTcapwidth=\dimen180
+\LT@head=\box67
+\LT@firsthead=\box68
+\LT@foot=\box69
+\LT@lastfoot=\box70
+\LT@gbox=\box71
+\LT@cols=\count295
+\LT@rows=\count296
+\c@LT@tables=\count297
+\c@LT@chunks=\count298
+\LT@p@ftn=\toks30
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+)
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2022/01/15 2.8a Font selection for XeLaTeX and LuaLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaT
+eX
+\l__fontspec_script_int=\count299
+\l__fontspec_language_int=\count300
+\l__fontspec_strnum_int=\count301
+\l__fontspec_tmp_int=\count302
+\l__fontspec_tmpa_int=\count303
+\l__fontspec_tmpb_int=\count304
+\l__fontspec_tmpc_int=\count305
+\l__fontspec_em_int=\count306
+\l__fontspec_emdef_int=\count307
+\l__fontspec_strong_int=\count308
+\l__fontspec_strongdef_int=\count309
+\l__fontspec_tmpa_dim=\dimen181
+\l__fontspec_tmpb_dim=\dimen182
+\l__fontspec_tmpc_dim=\dimen183
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/currfile/currfile.sty
+Package: currfile 2020/09/29 v0.7d Provides the file path elements of the curre
+nt input file
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
+Package: filehook 2020/09/29 v0.8a Hooks for input files
+
+(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook-2020.sty
+Package: filehook-2020 2020/09/29 v0.8a Hooks for input files
+))
+(/usr/share/texlive/texmf-dist/tex/latex/currfile/currfile-abspath.sty
+Package: currfile-abspath 2020/09/29 v0.7d Provides absolute file paths, the pa
+rent working directory and the main file name
+)
+\c@currfiledepth=\count310
+
+
+Package currfile-abspath Warning: The required recorder file (.fls) was not fou
+nd.
+(currfile-abspath)                Please compile with the '-recorder' option.
+(currfile-abspath)                Note that MikTeX requires two compiler runs.
+(currfile-abspath)                Occurred on input line 292.
+
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/01/26 3.70 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
+\bbl@readstream=\read2
+\l@dumylang=\language2
+Package babel Info: Non-standard hyphenation setup on input line 118.
+\l@nohyphenation=\language3
+\l@usenglishmax=\language4
+\l@ibycus=\language5
+\l@ancientgreek=\language6
+\l@ukenglish=\language7
+\l@monogreek=\language8
+\l@greek=\language9
+\babelcatcodetablenum=\catcodetable12
+\bbl@pattcodes=\catcodetable13
+)
+\babel@savecnt=\count311
+\U@D=\dimen184
+\l@unhyphenated=\language10
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
+\bbl@attr@locale=\attribute5
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language7). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language7). Reported on input line 108.
+))
+luaotfload | db : Reload initiated (formats: otf,ttf,ttc); reason: File not foun
+d: "Arial.ttf.ttf".
+
+! Package fontspec Error: The font "Arial.ttf" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.40 ]
+    
+? 
+luaotfload | aux : no font with id 0
+luaotfload | aux : no font with id 0
+
+Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
+(fontspec)             options [Ligatures=TeX,Path =,Extension =
+(fontspec)             .ttf,UprightFont = Arial.ttf,BoldItalicFont=
+(fontspec)             Arial_Bold_Italic.ttf,BoldFont =
+(fontspec)             Arial_Bold.ttf,ItalicFont = Arial_Italic.ttf].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[Arial.ttf]:mode=node;language=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[Arial_Bold.ttf]:mode=node;language=dflt;+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[Arial_Italic.ttf]:mode=node;language=dflt;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[Arial_Bold_Italic.ttf]:mode=node;language=dflt;+tli
+g;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box72
+\beforetitleunit=\skip64
+\aftertitleunit=\skip65
+\ttl@plus=\dimen185
+\ttl@minus=\dimen186
+\ttl@toksa=\toks31
+\titlewidth=\dimen187
+\titlewidthlast=\dimen188
+\titlewidthfirst=\dimen189
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/transparent-lt
+x.sty
+Package: transparent-ltx 2022-01-28 v0.95k Transparency with color stacks (repl
+acement for transparent.sty from Heiko Oberdiek)
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3opacity/l3opacity.sty
+Package: l3opacity 2021-11-12 L3 Experimental opacity support
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks32
+\pgfutil@tempdima=\dimen190
+\pgfutil@tempdimb=\dimen191
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box73
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks35
+))
+\pgf@x=\dimen192
+\pgf@y=\dimen193
+\pgf@xa=\dimen194
+\pgf@ya=\dimen195
+\pgf@xb=\dimen196
+\pgf@yb=\dimen197
+\pgf@xc=\dimen198
+\pgf@yc=\dimen199
+\pgf@xd=\dimen256
+\pgf@yd=\dimen257
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count312
+\c@pgf@countb=\count313
+\c@pgf@countc=\count314
+\c@pgf@countd=\count315
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
+\pgf@sys@id@count=\count316
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+File: pgfsys-luatex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count317
+\pgfsyssoftpath@bigbuffer@items=\count318
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen258
+\pgfmath@count=\count319
+\pgfmath@box=\box74
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count320
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen259
+\pgf@picmaxx=\dimen260
+\pgf@picminy=\dimen261
+\pgf@picmaxy=\dimen262
+\pgf@pathminx=\dimen263
+\pgf@pathmaxx=\dimen264
+\pgf@pathminy=\dimen265
+\pgf@pathmaxy=\dimen266
+\pgf@xx=\dimen267
+\pgf@xy=\dimen268
+\pgf@yx=\dimen269
+\pgf@yy=\dimen270
+\pgf@zx=\dimen271
+\pgf@zy=\dimen272
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen273
+\pgf@path@lasty=\dimen274
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen275
+\pgf@shorten@start@additional=\dimen276
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box75
+\pgf@hbox=\box76
+\pgf@layerbox@main=\box77
+\pgf@picture@serial@count=\count321
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen277
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen278
+\pgf@pt@y=\dimen279
+\pgf@pt@temp=\dimen280
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen281
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen282
+\pgf@sys@shading@range@num=\count322
+\pgf@shadingcount=\count323
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box78
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box79
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen283
+\pgf@nodesepend=\dimen284
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen285
+\pgffor@skip=\dimen286
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count324
+\pgfplotmarksize=\dimen287
+)
+\tikz@lastx=\dimen288
+\tikz@lasty=\dimen289
+\tikz@lastxsaved=\dimen290
+\tikz@lastysaved=\dimen291
+\tikz@lastmovetox=\dimen292
+\tikz@lastmovetoy=\dimen293
+\tikzleveldistance=\dimen294
+\tikzsiblingdistance=\dimen295
+\tikz@figbox=\box80
+\tikz@figbox@bg=\box81
+\tikz@tempbox=\box82
+\tikz@tempbox@bg=\box83
+\tikztreelevel=\count325
+\tikznumberofchildren=\count326
+\tikznumberofcurrentchild=\count327
+\tikz@fig@count=\count328
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count329
+\pgfmatrixcurrentcolumn=\count330
+\pgf@matrix@numberofcolumns=\count331
+)
+\tikz@expandcount=\count332
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip66
+\f@nch@O@elh=\skip67
+\f@nch@O@erh=\skip68
+\f@nch@O@olh=\skip69
+\f@nch@O@orh=\skip70
+\f@nch@O@elf=\skip71
+\f@nch@O@erf=\skip72
+\f@nch@O@olf=\skip73
+\f@nch@O@orf=\skip74
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
+)
+
+Package geometry Warning: Over-specification in `h'-direction.
+    `width' (483.69684pt) is ignored.
+
+
+Package geometry Warning: Over-specification in `v'-direction.
+    `height' (731.23582pt) is ignored.
+
+No file Gilmour_Space_Document_Template.aux.
+
+\openout1 = Gilmour_Space_Document_Template.aux
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+43.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count333
+\scratchdimen=\dimen296
+\scratchbox=\box84
+\nofMPsegments=\count334
+\nofMParguments=\count335
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count336
+\MPscratchDim=\dimen297
+\MPnumerator=\count337
+\makeMPintoPDFobject=\count338
+\everyMPtoPDFconversion=\toks45
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/pdflscape-ltx.
+sty
+Package: pdflscape-ltx 2022-01-28 v0.95k Display of landscape pages in PDF - ad
+aption of pdflscape to the PDFmanagement bundle (testphase)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+))
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 143.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 143.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 143.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 143.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 143.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 143.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 143.
+LaTeX Font Info:    Redeclaring math accent \check on input line 143.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 143.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 143.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 143.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 143.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 143.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 143.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 143.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 143.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 143.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 143.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 143.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 143.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 143.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 143.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 143.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 143.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 143.
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 143.
+<Gilmour Space Logo (Deep Space Blue).png, id=5, 1068.99374pt x 150.5625pt>
+File: Gilmour Space Logo (Deep Space Blue).png Graphic file (type png)
+<use Gilmour Space Logo (Deep Space Blue).png>
+Package luatex.def Info: Gilmour Space Logo (Deep Space Blue).png  used on inpu
+t line 153.
+(luatex.def)             Requested size: 270.30118pt x 38.07013pt.
+
+Overfull \hbox (3.25589pt too wide) in paragraph at lines 174--187
+[][] 
+ []
+
+<./Gilmour Space Icon (886x886) - Transparent Background.png, id=6, 213.4374pt 
+x 213.4374pt>
+File: ./Gilmour Space Icon (886x886) - Transparent Background.png Graphic file 
+(type png)
+<use ./Gilmour Space Icon (886x886) - Transparent Background.png>
+Package luatex.def Info: ./Gilmour Space Icon (886x886) - Transparent Backgroun
+d.png  used on input line 195.
+(luatex.def)             Requested size: 426.79134pt x 426.8509pt.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./Gilmour Space Icon (886x88
+6) - Transparent Background.png><./Gilmour Space Logo (Deep Space Blue).png>]
+No file Gilmour_Space_Document_Template.toc.
+\tf@toc=\write4
+
+\openout4 = Gilmour_Space_Document_Template.toc
+File: Gilmour Space Logo (Deep Space Blue).png Graphic file (type png)
+<use Gilmour Space Logo (Deep Space Blue).png>
+Package luatex.def Info: Gilmour Space Logo (Deep Space Blue).png  used on inpu
+t line 202.
+(luatex.def)             Requested size: 113.81102pt x 16.02892pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.37895pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.37895pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.37895pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 202.
+
+File: ./Gilmour Space Icon (886x886) - Transparent Background.png Graphic file 
+(type png)
+<use ./Gilmour Space Icon (886x886) - Transparent Background.png>
+Package luatex.def Info: ./Gilmour Space Icon (886x886) - Transparent Backgroun
+d.png  used on input line 202.
+(luatex.def)             Requested size: 213.39566pt x 213.40755pt.
+[2]
+No file Gilmour_Space_Document_Template.lof.
+\tf@lof=\write5
+
+\openout5 = Gilmour_Space_Document_Template.lof
+No file Gilmour_Space_Document_Template.lot.
+\tf@lot=\write6
+
+\openout6 = Gilmour_Space_Document_Template.lot
+File: Gilmour Space Logo (Deep Space Blue).png Graphic file (type png)
+<use Gilmour Space Logo (Deep Space Blue).png>
+Package luatex.def Info: Gilmour Space Logo (Deep Space Blue).png  used on inpu
+t line 206.
+(luatex.def)             Requested size: 113.81102pt x 16.02892pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.37895pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.37895pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.37895pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 206.
+
+File: ./Gilmour Space Icon (886x886) - Transparent Background.png Graphic file 
+(type png)
+<use ./Gilmour Space Icon (886x886) - Transparent Background.png>
+Package luatex.def Info: ./Gilmour Space Icon (886x886) - Transparent Backgroun
+d.png  used on input line 206.
+(luatex.def)             Requested size: 213.39566pt x 213.40755pt.
+[3]
+File: Gilmour Space Logo (Deep Space Blue).png Graphic file (type png)
+<use Gilmour Space Logo (Deep Space Blue).png>
+Package luatex.def Info: Gilmour Space Logo (Deep Space Blue).png  used on inpu
+t line 245.
+(luatex.def)             Requested size: 113.81102pt x 16.02892pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.37895pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.37895pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.37895pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 245.
+
+File: ./Gilmour Space Icon (886x886) - Transparent Background.png Graphic file 
+(type png)
+<use ./Gilmour Space Icon (886x886) - Transparent Background.png>
+Package luatex.def Info: ./Gilmour Space Icon (886x886) - Transparent Backgroun
+d.png  used on input line 245.
+(luatex.def)             Requested size: 213.39566pt x 213.40755pt.
+[4]
+<GST Patch (327x327).png, id=25, 157.5486pt x 157.5486pt>
+File: GST Patch (327x327).png Graphic file (type png)
+<use GST Patch (327x327).png>
+Package luatex.def Info: GST Patch (327x327).png  used on input line 260.
+(luatex.def)             Requested size: 157.5482pt x 157.5482pt.
+ 
+AED: lastpage setting LastPage
+File: Gilmour Space Logo (Deep Space Blue).png Graphic file (type png)
+<use Gilmour Space Logo (Deep Space Blue).png>
+Package luatex.def Info: Gilmour Space Logo (Deep Space Blue).png  used on inpu
+t line 263.
+(luatex.def)             Requested size: 113.81102pt x 16.02892pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.37895pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.37895pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.37895pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 263.
+
+File: ./Gilmour Space Icon (886x886) - Transparent Background.png Graphic file 
+(type png)
+<use ./Gilmour Space Icon (886x886) - Transparent Background.png>
+Package luatex.def Info: ./Gilmour Space Icon (886x886) - Transparent Backgroun
+d.png  used on input line 263.
+(luatex.def)             Requested size: 213.39566pt x 213.40755pt.
+[5<./GST Patch (327x327).png>] (./Gilmour_Space_Document_Template.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+)
+
+Here is how much of LuaTeX's memory you used:
+ 21407 strings out of 477805
+ 125297,953878 words of node,token memory allocated
+ 569 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 15 attribute, 63 glue_spec
+, 9 attribute_list, 3 write nodes
+   avail lists: 1:2,2:1434,3:126,4:370,5:356,6:66,7:3140,8:11,9:679,10:6,11:246
+ 41162 multiletter control sequences out of 65536+600000
+ 42 fonts using 4389215 bytes
+ 85i,14n,82p,1494b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+<./Arial.ttf><./Arial_Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb>
+Output written on Gilmour_Space_Document_Template.pdf (5 pages, 342180 bytes).
+
+PDF statistics: 56 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 131072)
+ 11 words of extra memory for PDF output out of 10000 (max. 100000000)
+
